@@ -1,6 +1,6 @@
-# 📸 PhotoMagic Studio
+# PhotoMagic Studio
 
-A full-stack photo editing web application with JWT + OAuth2 authentication powered by React and FastAPI.
+A full-stack photo editing web application with JWT and OAuth2 authentication, built with React and FastAPI.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.136.3-009688?logo=fastapi)
@@ -9,18 +9,18 @@ A full-stack photo editing web application with JWT + OAuth2 authentication powe
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔐 **JWT + OAuth2 Authentication** — Register, login, and secure sessions with Bearer tokens
-- 🎨 **10+ Photo Filters** — Brightness, contrast, saturation, blur, grayscale, sepia, hue rotate, invert, opacity
-- 🔄 **Transform Tools** — Rotate and flip your images
-- 💾 **Save Photos** — Save edited photos to your session
-- ⬇️ **Download** — Export your edited photo as PNG
-- ⚡ **Real-time Preview** — See filter changes instantly
+- **JWT + OAuth2 Authentication** — Register, login, and secure sessions with Bearer tokens
+- **10+ Photo Filters** — Brightness, contrast, saturation, blur, grayscale, sepia, hue rotate, invert, opacity
+- **Transform Tools** — Rotate and flip images
+- **Save Photos** — Save edited photos to your session
+- **Download** — Export edited photos as PNG
+- **Real-time Preview** — See filter changes instantly
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Frontend | Backend |
 |---|---|
@@ -32,7 +32,7 @@ A full-stack photo editing web application with JWT + OAuth2 authentication powe
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 Photomagic/
@@ -42,7 +42,7 @@ Photomagic/
 ├── backend/
 │   ├── main.py
 │   ├── requirements.txt
-│   └── .env              ← create this locally (not pushed)
+│   └── .env              <- create this locally (not pushed)
 └── photo-editor/
     ├── public/
     ├── src/
@@ -53,7 +53,7 @@ Photomagic/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -99,8 +99,8 @@ Run the backend server:
 uvicorn main:app --reload
 ```
 
-Backend runs at **http://localhost:8000**
-Swagger docs at **http://localhost:8000/docs**
+Backend runs at `http://localhost:8000`  
+Swagger docs at `http://localhost:8000/docs`
 
 ---
 
@@ -117,55 +117,55 @@ npm install
 npm start
 ```
 
-Frontend runs at **http://localhost:3000**
+Frontend runs at `http://localhost:3000`
 
 ---
 
-## 🔐 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description | Auth Required |
 |---|---|---|---|
-| GET | `/` | Health check | ❌ |
-| POST | `/register` | Create new account | ❌ |
-| POST | `/login` | Login and get JWT token | ❌ |
-| GET | `/me` | Get current user info | ✅ |
-| GET | `/protected` | Example protected route | ✅ |
+| GET | `/` | Health check | No |
+| POST | `/register` | Create new account | No |
+| POST | `/login` | Login and get JWT token | No |
+| GET | `/me` | Get current user info | Yes |
+| GET | `/protected` | Example protected route | Yes |
 
 ---
 
-## 🔑 How Authentication Works
+## How Authentication Works
 
-1. User registers with email and password → password is hashed with **bcrypt**
-2. User logs in → server verifies password and returns a **JWT Bearer token**
-3. Frontend stores token in `sessionStorage`
-4. Every protected request sends `Authorization: Bearer <token>` header
-5. Token expires after 30 minutes (configurable in `.env`)
-
----
-
-## 📸 Usage
-
-1. Register a new account or login
-2. Upload any image using the **Choose Image** button
-3. Adjust filters using the sliders
-4. Use **Rotate** or **Flip** to transform your image
-5. Click **Save** to save to your session or **Download** to export as PNG
+1. User registers with email and password — password is hashed with **bcrypt**
+2. User logs in — server verifies password and returns a **JWT Bearer token**
+3. Frontend stores the token in `sessionStorage`
+4. Every protected request sends `Authorization: Bearer <token>` in the header
+5. Token expires after 30 minutes (configurable via `.env`)
 
 ---
 
-## 🤝 Contributing
+## Usage
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+1. Register a new account or login with existing credentials
+2. Upload an image using the Choose Image button
+3. Adjust filters using the sliders on the left panel
+4. Use Rotate or Flip to transform the image
+5. Click Save to store the photo in your session or Download to export as PNG
 
 ---
 
-## 📄 License
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Rishav45-developer**  
 GitHub: [@Rishav45-developer](https://github.com/Rishav45-developer)
