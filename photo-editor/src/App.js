@@ -220,7 +220,7 @@ export default function PhotoEditor() {
     if (!editedImage || !user) return;
     const token = getToken();
     if (!token || isTokenExpired(token)) {
-      alert('⚠️ Session expired. Please login again.');
+      alert(' Session expired. Please login again.');
       handleLogout();
       return;
     }
