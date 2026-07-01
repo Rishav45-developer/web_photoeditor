@@ -348,7 +348,7 @@ export default function PhotoEditor() {
           </p>
 
           <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg text-xs text-gray-700 text-center">
-            <strong>🔐 Real JWT + OAuth2 Backend</strong><br />
+            <strong> Real JWT + OAuth2 Backend</strong><br />
             • FastAPI /register &amp; /login endpoints<br />
             • bcrypt password hashing<br />
             • Bearer token on every request
