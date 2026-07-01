@@ -233,7 +233,7 @@ export default function PhotoEditor() {
     const updated = [...savedPhotos, photo];
     setSavedPhotos(updated);
     savePhotosToStorage(user.email, updated);
-    alert('✨ Photo saved!');
+    alert(' Photo saved!');
   };
 
   const handleDownload = () => {
@@ -284,9 +284,9 @@ export default function PhotoEditor() {
       <div className="min-h-screen bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-2xl p-8 w-full max-w-md">
           <div className="text-center mb-6">
-            <div className="text-6xl mb-2">📸</div>
+            <div className="text-6xl mb-2"></div>
             <h1 className="text-3xl font-bold text-gray-800">PhotoMagic Studio</h1>
-            <p className="text-gray-600 mt-2">Transform your photos with magic ✨</p>
+            <p className="text-gray-600 mt-2">Transform your photos with magic </p>
             <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
               <Shield size={14} />
               JWT + OAuth2 Authentication
@@ -366,7 +366,7 @@ export default function PhotoEditor() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-2xl font-bold text-white drop-shadow-lg">✨ PhotoMagic Studio</h1>
+              <h1 className="text-2xl font-bold text-white drop-shadow-lg"> PhotoMagic Studio</h1>
               <div className="flex items-center gap-2 mt-1">
                 <Shield size={12} className="text-green-300" />
                 <span className="text-xs text-white/70">JWT Authenticated via FastAPI</span>
@@ -374,7 +374,7 @@ export default function PhotoEditor() {
             </div>
             <div className="flex items-center gap-4">
               <div className="text-right">
-                <span className="text-sm text-white/90 font-semibold block">👋 {user.email}</span>
+                <span className="text-sm text-white/90 font-semibold block"> {user.email}</span>
                 {tokenInfo && (
                   <span className="text-xs text-white/60">Expires: {tokenInfo.expiresAt}</span>
                 )}
@@ -396,7 +396,7 @@ export default function PhotoEditor() {
         {/* Left panel */}
         <div className="md:col-span-1 space-y-4">
           <div className="bg-white/95 backdrop-blur rounded-xl shadow-2xl p-6 border border-white/30">
-            <h2 className="text-lg font-semibold mb-4 text-gray-800">📤 Upload Photo</h2>
+            <h2 className="text-lg font-semibold mb-4 text-gray-800"> Upload Photo</h2>
             <input ref={fileInputRef} type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
             <button
               onClick={() => fileInputRef.current.click()}
@@ -408,7 +408,7 @@ export default function PhotoEditor() {
 
           {image && (
             <div className="bg-white/95 backdrop-blur rounded-xl shadow-2xl p-6 space-y-4 border border-white/30 max-h-[600px] overflow-y-auto">
-              <h2 className="text-lg font-semibold mb-2 text-gray-800">🎨 Edit Controls</h2>
+              <h2 className="text-lg font-semibold mb-2 text-gray-800"> Edit Controls</h2>
 
               {/* Basic */}
               <h3 className="text-sm font-bold text-gray-700 flex items-center gap-2">
@@ -460,7 +460,7 @@ export default function PhotoEditor() {
               {/* Save / Download */}
               <div className="flex gap-2 pt-3 border-t border-gray-200">
                 <button onClick={handleSave} className="flex-1 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:from-green-600 hover:to-emerald-700 transition text-sm font-semibold">
-                  💾 Save
+                   Save
                 </button>
                 <button onClick={handleDownload} className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition text-sm font-semibold">
                   <Download size={16} /> Download
@@ -473,7 +473,7 @@ export default function PhotoEditor() {
         {/* Right panel */}
         <div className="md:col-span-2">
           <div className="bg-white/95 backdrop-blur rounded-xl shadow-2xl p-6 border border-white/30">
-            <h2 className="text-lg font-semibold mb-4 text-gray-800">✨ Preview</h2>
+            <h2 className="text-lg font-semibold mb-4 text-gray-800"> Preview</h2>
             {editedImage ? (
               <div className="flex justify-center bg-gradient-to-br from-violet-100 to-purple-100 rounded-lg p-4">
                 <img src={editedImage} alt="Edited" className="max-w-full h-auto rounded-lg shadow-2xl" />
@@ -489,7 +489,7 @@ export default function PhotoEditor() {
 
           {savedPhotos.length > 0 && (
             <div className="bg-white/95 backdrop-blur rounded-xl shadow-2xl p-6 mt-6 border border-white/30">
-              <h2 className="text-lg font-semibold mb-4 text-gray-800">🎨 Your Saved Photos ({savedPhotos.length})</h2>
+              <h2 className="text-lg font-semibold mb-4 text-gray-800"> Your Saved Photos ({savedPhotos.length})</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {savedPhotos.map((photo) => (
                   <div key={photo.id} className="relative group">
